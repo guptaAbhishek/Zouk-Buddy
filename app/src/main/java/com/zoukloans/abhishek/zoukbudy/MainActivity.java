@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
 import com.zoukloans.abhishek.zoukbudy.facebook.FaceBookLogin;
 import com.zoukloans.abhishek.zoukbudy.googlePlus.GooglePlusLogin;
 
@@ -101,6 +103,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_linkedIn) {
 
         } else if (id == R.id.nav_google){
+            Toast.makeText(this,"It is working",Toast.LENGTH_LONG).show();
             Intent googleLogin = new Intent(MainActivity.this, GooglePlusLogin.class);
             startActivity(googleLogin);
 
