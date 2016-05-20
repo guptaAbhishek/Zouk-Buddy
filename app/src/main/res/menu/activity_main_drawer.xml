@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Setting" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Tools" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_fb"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Facebook" />
+            <item
+                android:id="@+id/nav_linkedIn"
+                android:icon="@drawable/ic_menu_send"
+                android:title="LinkedIn" />
+            <item
+                android:id="@+id/nav_google"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Google Plust" />
+
+        </menu>
+    </item>
+
+</menu>
