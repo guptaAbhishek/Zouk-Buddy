@@ -14,72 +14,128 @@
         android:paddingRight="24dp">
 
 
-        <!-- College Name Label -->
+        <!-- First Name Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_college_name"
+            <EditText android:id="@+id/input_first_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapWords"
-                android:hint="College Name e.g. NIT Rourkela " />
+                android:hint="Frist Name *" />
         </android.support.design.widget.TextInputLayout>
 
-        <!-- Branch Label -->
+        <!-- Middle Name Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_brach_name"
+            <EditText android:id="@+id/input_middle_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapWords"
-                android:hint="Branch Name e.g. Computer Science" />
+                android:hint="Middle Name" />
         </android.support.design.widget.TextInputLayout>
 
-        <!-- college Id Label -->
+        <!-- Last Name Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_college_id"
+            <EditText android:id="@+id/input_last_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapWords"
-                android:hint="College ID e.g. 111BM0007 *" />
+                android:hint="Last Name *" />
         </android.support.design.widget.TextInputLayout>
 
 
-        <!-- Course Type Label -->
+        <!-- Email Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_course_type"
+            <EditText android:id="@+id/input_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textCapWords"
-                android:hint="Course Type e.g. Full/Part/Distance" />
+                android:inputType="textEmailAddress"
+                android:hint="Email *" />
         </android.support.design.widget.TextInputLayout>
 
-        <!-- College Joining date Label -->
+        <!-- Phone Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_college_joining_date"
+            <EditText android:id="@+id/input_phone_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapWords"
-                android:hint="College Joining Date" />
+                android:hint="Phone *" />
         </android.support.design.widget.TextInputLayout>
 
+        <!-- PAN Name Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/input_pan_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="PAN Card No." />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:gravity="center"
+            android:textSize="16dp"
+            />
+
+        <!-- Voter ID Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/input_voter_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="Voter ID" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- OR -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:gravity="center"
+            android:textSize="16dp"
+            />
+
+        <!-- Aadhar Card Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/input_aadhar_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="Aadhar ID" />
+        </android.support.design.widget.TextInputLayout>
 
         <!-- Signup Button -->
         <android.support.v7.widget.AppCompatButton

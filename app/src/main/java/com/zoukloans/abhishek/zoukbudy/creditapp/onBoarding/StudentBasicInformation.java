@@ -10,6 +10,6 @@ public class StudentBasicInformation extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_step1_on_boarding);
+        setContentView(R.layout.activity_student_basic_information);
     }
 }
