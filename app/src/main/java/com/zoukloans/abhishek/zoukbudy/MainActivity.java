@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,6 +19,8 @@ import android.widget.Toast;
 import com.zoukloans.abhishek.zoukbudy.facebook.FaceBookLogin;
 import com.zoukloans.abhishek.zoukbudy.googlePlus.GooglePlusLogin;
 
+import com.buddy.sdk.*;
+import com.buddy.sdk.models.*;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,15 +32,8 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
+        checkBuddyConnection();
+        
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -112,5 +108,17 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void checkBuddyConnection(){
+        Buddy.setConnectivityLevelChangedCallback(new ConnectivityLevelChangedCallback() {
+            @Override
+            public void connectivityLevelChanged(ConnectivityLevel level) {
+                String message = (level == ConnectivityLevel.None) ? "Connectivity Lost":"Reconnected!";
+                Toast toast = Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.TOP,0,0);
+                toast.show();
+            }
+        });
     }
 }

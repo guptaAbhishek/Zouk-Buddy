@@ -2,6 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zoukloans.abhishek.zoukbudy">
 
+    <!-- Permission to vibrate - recommended, allows vibration feedback on scan -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Permission to use camera - required -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Camera features - recommended -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+
     <!-- USES PERMISSION FOR THE LOCATION AND INTERNET ETC -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -22,13 +33,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".UserPhoneData" />
 
         <!-- Facebook Login -->
@@ -51,7 +56,6 @@
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
         <activity android:name=".facebook.FriendList" />
 
         <!-- Google Plus Login -->
@@ -59,16 +63,24 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".googlePlus.GooglePlusLogin">
-
-        </activity>
+        <activity android:name=".googlePlus.GooglePlusLogin" />
 
         <!-- LinkedIn Login -->
         <activity android:name=".linkedIn.LinkedInLogin" />
-
         <activity
             android:name=".creditapp.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".creditapp.ProfileActivity" />
+        <activity android:name=".creditapp.LandingActivity" />
+        <activity android:name=".creditapp.onBoarding.StudentBasicInformation" />
+        <activity android:name=".creditapp.onBoarding.StudentCollegeInformation" />
+        <activity android:name=".creditapp.onBoarding.StudentGuardianInformation"></activity>
     </application>
 
 </manifest>

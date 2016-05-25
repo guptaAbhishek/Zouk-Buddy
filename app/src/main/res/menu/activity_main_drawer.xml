@@ -13,11 +13,19 @@
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Setting" />
+            android:title="Inbox" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Tools" />
+            android:title="Chat" />
+        <item
+            android:id="@+id/nav_change_login_pin"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Change Login Pin" />
+        <item
+            android:id="@+id/nav_apply_now"
+            android:title="Apply Now"
+            />
     </group>
 
     <item android:title="Communicate">
@@ -35,6 +43,14 @@
                 android:icon="@drawable/ic_menu_send"
                 android:title="Google Plust" />
 
+            <item
+                android:id="@+id/nav_rate_us"
+                android:title="Rate Us"
+                />
+            <item
+                android:id="@+id/nav_logout"
+                android:title="Logout"
+            />
         </menu>
     </item>
 

@@ -36,6 +36,9 @@ import com.zoukloans.abhishek.zoukbudy.R;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
+import com.buddy.sdk.*;
+import com.buddy.sdk.models.*;
+
 /**
  * A login screen that offers login via email/password.
  */
@@ -68,6 +71,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        Buddy.init(getApplicationContext(), "bbbbbc.bJCBKFGscvMjc", "8c34c1ad-bb19-69ae-8d83-8d10548ee9d6");
+
+
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
